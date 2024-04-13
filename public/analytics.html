@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Аналитика</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="public/images/logo.svg">
+  </div>
+  <nav>
+    <a href="main">Главная</a>
+    <a href="analytics" class="current-page">Аналитика</a>
+  </nav>
+  <div class="user-icon">
+    <img src="public/images/ava.png" width="32px">
+  </div>
+</header>
+<div id="analytics-content">
+  <div class="analytics-card">
+    <div class="analytics-card-top">
+      <div class="pic"><img src="public/images/unknown.png"></div>
+      <div class="description">
+        pH-метр Mettler-Toledo International, Inc. SevenCompact S220
+        <div class="sub">
+          <div class="element">S1.4.I14-9.001</div>
+          <div class="separator"><img src="public/images/Text.svg"></div>
+          <div class="element">00-024004</div>
+        </div>
+      </div>
+      <div class="action">
+        <div>
+          <select>
+            <option>Свободен</option>
+            <option>В работе</option>
+          </select>
+        </div>
+        <div id="imageContainer"><img src="public/images/Color2.svg" id="heart"></div>
+        <div><img src="public/images/settings.svg"></div>
+      </div>
+    </div>
+    <div class="select-action">
+      <div>
+        <select>
+          <option>Работа прибора</option>
+        </select>
+      </div>
+      <div class="save">
+        <div class="button"><img src="public/images/clock.svg"></div>
+        <div class="button pdf">Сохранить PDF
+          <div class="separator"></div>
+          <img src="public/images/more.svg"></div>
+      </div>
+    </div>
+    <div class="date">
+      <input type="datetime-local" id="datepicker">
+      <div class="sep-arrow"><img src="public/images/sep-arrow.svg"></div>
+      <input type="datetime-local" id="datepicker2">
+    </div>
+    <div class="range">
+      <button class="btn" onclick="toggleActive(this)">День</button>
+      <button class="btn" onclick="toggleActive(this)">Неделя</button>
+      <button class="btn active" onclick="toggleActive(this)">2 недели</button>
+      <button class="btn" onclick="toggleActive(this)">Месяц</button>
+      <button class="btn" onclick="toggleActive(this)">3 месяца</button>
+      <button class="btn" onclick="toggleActive(this)">Полгода</button>
+    </div>
+    <div class="table">
+      <ta>
+        <table>
+          <tr>
+            <th>Начало</th>
+            <th>Тип работ</th>
+            <th>Работы</th>
+            <th>Результат</th>
+            <th>Пользователь</th>
+          </tr>
+          <tr>
+            <td>09.10.2021, 15:46</td>
+            <td><span class="status">В работе</span><br>Измерение</td>
+            <td><span>Образец/серия:</span> 000100057935_170000010325_0000251849</td>
+            <td class="result">
+              <div class="result-descr"></div>
+              <img src="public/images/ok.svg"></td>
+            <td>morozovava</td>
+          </tr>
+          <tr>
+            <td>12.10.2021, 12:17</td>
+            <td><span class="status">В работе</span><br>Калибровка</td>
+            <td><span>Номер колонки:</span> Колонка 2<br>
+              <span>Образец:</span> Образец 2<br>
+              <span>Образец:</span> образец 1<br>
+              <span>Метод:</span> метов тестовый<br>
+              <span>Номер колонки:</span> Колонка 1<br>
+            </td>
+            <td class="result">
+              <div class="result-descr">
+                Промывка с указанием вещества: Вещество<br>
+                ...
+              </div>
+              <img src="public/images/ok.svg"></td>
+            <td>morozovava</td>
+          </tr>
+        </table>
+      </ta>
+    </div>
+  </div>
+</div>
+<script src="public/script.js"></script>
+</body>
+</html>

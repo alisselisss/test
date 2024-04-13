@@ -1,5 +1,6 @@
 const image = document.getElementById('heart');
 const imageContainer = document.getElementById('imageContainer');
+const serverUrl = 'http://localhost:8888/.netlify/functions/server';
 
 if (imageContainer) {
     imageContainer.addEventListener('click', function () {

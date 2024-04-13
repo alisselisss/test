@@ -1,6 +1,15 @@
 const http = require('http');
 const fs = require('fs');
+const serverless = require('serverless-http')
 const path = require('path');
+
+const options = {
+    hostname: 'localhost',
+    port: 8888,
+    path: '/.netlify/functions/hello',
+    method: 'GET'
+};
+
 
 const server = http.createServer((req, res) => {
             let filePath = '.' + req.url;
@@ -185,7 +194,7 @@ function updateItem(item) {
 }
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

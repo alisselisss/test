@@ -37,7 +37,7 @@ function sendNotificationDataToServer(element, actionImage) {
     const id = element.closest('tr').dataset.id;
     console.log(actionImage)
 
-    fetch('http://localhost:3000/updateItemNotifications', {
+    fetch('http://talisa220903.fvds.ru/updateItemNotifications', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -120,7 +120,7 @@ function sendDataToServer(itemId, status) {
         status: status
     };
 
-    fetch('http://localhost:3000/updateItemStatus', {
+    fetch('http://talisa220903.fvds.ru/updateItemStatus', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -141,7 +141,7 @@ function sendDataToServer(itemId, status) {
         });
 }
 
-fetch('http://localhost:3000/data/data.json')
+fetch('http://talisa220903.fvds.ru/data/data.json')
     .then(response => response.json())
     .then(data => {
         tableData = data;
